@@ -1,1 +1,1 @@
-from pwn import *
+print("Hello World")
