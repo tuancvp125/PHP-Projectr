@@ -11,7 +11,7 @@
     <form class="shadow p-4">
         <h3 class="display-4">LOGIN</h3>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label for="exampleInputEmail1" class="form-label">Username</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
