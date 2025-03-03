@@ -22,11 +22,11 @@
 				<h4>Elias</h4>
             </div>
             <!-- Employee Navigation Bar -->
-            <?php
-                $user = "admin";
+			<?php 
+				$user = "admin";
 
-                if ($user == "employee") {
-            ?>
+				if ($user == "employee") {
+			?>
 			<ul>
 				<li>
 					<a href="#">
@@ -54,21 +54,55 @@
 				</li>
 				<li>
 					<a href="#">
-						<i class="fa fa-power-off" aria-hidden="true"></i>
+						<i class="fa fa-sign-out" aria-hidden="true"></i>
 						<span>Logout</span>
 					</a>
 				</li>
             </ul>
-            <?php 
-                } else { 
-            
-            ?>
-              
-            <?php } ?>
+		<?php } else {  ?>
+			<!-- Admin Navigation Bar -->
+			<ul>
+				<li>
+					<a href="#">
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
+						<span>Dashboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-users" aria-hidden="true"></i>
+						<span>Manage Users</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<span>Create Task</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-tasks" aria-hidden="true"></i>
+						<span>All Tasks</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-bell" aria-hidden="true"></i>
+						<span>Notifications</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-sign-out" aria-hidden="true"></i>
+						<span>Logout</span>
+					</a>
+				</li>
+            </ul>
+		<?php } ?>
 		</nav>
 		<section class="section-1">
-			<h1>WELCOME</h1>
-			<p>#CodingWithElias</p>
+			
 		</section>
 	</div>
 
