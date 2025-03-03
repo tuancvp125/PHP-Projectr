@@ -13,19 +13,24 @@
 				<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
 			</label>
 		</h2>
-		<i class="fa fa-user" aria-hidden="true"></i>
+		<i class="fa fa-bell" aria-hidden="true"></i>
 	</header>
 	<div class="body">
 		<nav class="side-bar">
 			<div class="user-p">
 				<img src="img/user.jpg">
 				<h4>Elias</h4>
-			</div>
+            </div>
             <!-- Employee Navigation Bar -->
+            <?php
+                $user = "admin";
+
+                if ($user == "employee") {
+            ?>
 			<ul>
 				<li>
 					<a href="#">
-						<i class="fa fa-teachometer" aria-hidden="true"></i>
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
 						<span>Dashboard</span>
 					</a>
 				</li>
@@ -43,11 +48,23 @@
 				</li>
 				<li>
 					<a href="#">
+						<i class="fa fa-bell" aria-hidden="true"></i>
+						<span>Notifications</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
 						<i class="fa fa-power-off" aria-hidden="true"></i>
 						<span>Logout</span>
 					</a>
 				</li>
-			</ul>
+            </ul>
+            <?php 
+                } else { 
+            
+            ?>
+              
+            <?php } ?>
 		</nav>
 		<section class="section-1">
 			<h1>WELCOME</h1>
