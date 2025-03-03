@@ -19,7 +19,7 @@
 		<nav class="side-bar">
 			<div class="user-p">
 				<img src="img/user.jpg">
-				<h4>Elias</h4>
+				<h4>@user</h4>
             </div>
             <!-- Employee Navigation Bar -->
 			<?php 

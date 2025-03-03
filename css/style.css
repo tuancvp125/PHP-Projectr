@@ -95,3 +95,15 @@
 #checkbox:checked ~ .body .side-bar a span{
 	display: none;
 }
+
+.login-body {
+	display :  flex;
+	justify-content: center;
+	align-items : center;
+	min-height :  100vh;
+}
+
+.login-body form {
+	max-width : 420px;
+	width: 90%;
+}
