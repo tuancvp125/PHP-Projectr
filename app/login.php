@@ -1,5 +1,6 @@
 <?php
 if (isset($_POST["user_name"]) && isset($_POST["password"])) {
+    include "../DB_connection.php";
     function validate_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -19,7 +20,9 @@ if (isset($_POST["user_name"]) && isset($_POST["password"])) {
         header("Location: ../login.php?error=$em");
         exit();
     } else {
-        
+        $sql = "SELECT * FROM user WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($user_name);
     }
 } else {
     $em = "Unknown error occured";
