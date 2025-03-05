@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION['role']) && isset($_SESSION['id'])) { //Need confirmation from log first
-if (isset($_POST["user_name"]) && isset($_POST["password"]) && isset($_POST["full_name"]) && $_SESSION['role'] == 'admin') {
+if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == 'admin') { //Need confirmation from log first
+if (isset($_POST["user_name"]) && isset($_POST["password"]) && isset($_POST["full_name"])) {    
     include "../DB_connection.php";
     function validate_input($data) {
         $data = trim($data);
