@@ -22,6 +22,7 @@
 		<?php include "inc/nav.php" ?>
 		<section class="section-1">		
             <h4 class="title">Manage Users <a href="add-user.php"> Add User </a></h4>
+            <?php if ($users != 0) { ?>
             <table class="main-table">
                 <tr>
                     <th>#</th>
@@ -30,17 +31,22 @@
                     <th>Role</th>
                     <th>Action</th>
                 </tr>
+                <?php $i=0; foreach ($users as $user) { ?>
                 <tr>
-                    <td>1</td>
-                    <td>Elias A</td>
-                    <td>elias</td>
-                    <td>Employee</td>
+                    <td><?=++$i?></td>
+                    <td><?=$user['full_name']?></td>
+                    <td><?=$user['username']?></td>
+                    <td><?=$user['role']?></td>
                     <td>
-                        <a href="" class="edit-btn">Edit</a>
-                        <a href="" class="edit-btn">Delete</a>
+                        <a href="edit-user.php?id=<?=$user['id']?>" class="edit-btn">Edit</a>
+                        <a href="delete-user.php?id=<?=$user['id']?>" class="edit-btn">Delete</a>
                     </td>
                 </tr>
+                <?php } ?>
             </table>
+            <?php }else { ?>
+
+            <?php } ?>
 		</section>
 	</div>
 
