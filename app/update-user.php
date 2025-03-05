@@ -34,7 +34,7 @@ if (isset($_POST["user_name"]) && isset($_POST["password"]) && isset($_POST["ful
         update_user($conn, $data);     
 
         $em = "User created successfully!";
-        header("Location: ../edit-user.php?success=$em&$id=$id");
+        header("Location: ../edit-user.php?success=$em&id=$id"); //dcm??
         exit();
     }
 } else {
