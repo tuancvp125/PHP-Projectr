@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +14,7 @@
 <body>
 	<input type="checkbox" id="checkbox">
 	<header class="header">
-		<h2 class="u-name">SIDE <b>BAR</b>
+		<h2 class="u-name">TASK <b>PRO</b>
 			<label for="checkbox">
 				<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
 			</label>
@@ -108,3 +114,10 @@
 
 </body>
 </html>
+
+<?php }else { //else always go with enclose bracket
+	$em = "First login";
+	header("Location: login.php?error=$em");
+	exit();
+}
+?>
