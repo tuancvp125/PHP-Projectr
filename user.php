@@ -1,6 +1,10 @@
 <?php
 	session_start();
 	if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
+        include "app/Model/User.php";
+        include "DB_connection.php";
+
+        $users = get_all_users($conn);
 ?>
 
 <!DOCTYPE html>
@@ -17,35 +21,25 @@
 	<div class="body">
 		<?php include "inc/nav.php" ?>
 		<section class="section-1">		
-            Manage Users
-            <table class="table">
-            <thead>
+            <h4 class="title">Manage Users <a href="add-user.php"> Add User </a></h4>
+            <table class="main-table">
                 <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Action</th>
                 </tr>
                 <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                    <td>1</td>
+                    <td>Elias A</td>
+                    <td>elias</td>
+                    <td>Employee</td>
+                    <td>
+                        <a href="" class="edit-btn">Edit</a>
+                        <a href="" class="edit-btn">Delete</a>
+                    </td>
                 </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                </tr>
-            </tbody>
             </table>
 		</section>
 	</div>
