@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
+	if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == 'admin') {
         include "app/Model/Task.php";
         include "app/Model/User.php";
         include "DB_connection.php";

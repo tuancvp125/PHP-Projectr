@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
+	if (isset($_SESSION['role']) && isset($_SESSION['id'])) { //why setting role=admin??
 ?>
 
 <!DOCTYPE html>
