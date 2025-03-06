@@ -1,27 +1,25 @@
 <?php
 	session_start();
 	if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
-        include "app/Model/User.php";
         include "app/Model/Task.php";
         include "DB_connection.php";
 
         if (!isset($_GET['id'])) {
-            header("Location: login.php");
+            header("Location: tasks.php");
             exit();
         }
         $id = $_GET['id'];
-        $user = get_user_by_id($conn, $id); 
+        $task = get_task_by_id($conn, $id); 
 
-        if ($user == 0) {
-            header("Location: user.php");
+        if ($task == 0) {
+            header("Location: tasks.php");
             exit();
         }
-        $data = array($id, "employee");
-        delete_user($conn, $data);
+        $data = array($id);
+        delete_task($conn, $data);
         $em = "Delete Successfully";
-        header("Location: user.php?success=$em");
+        header("Location: tasks.php?success=$em");
         exit();
-
  }else { //else always go with enclose bracket
 	$em = "First login";
 	header("Location: login.php?error=$em");

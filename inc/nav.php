@@ -50,7 +50,7 @@
 						<span>Dashboard</span>
 					</a>
 				</li>
-				<li class="active"> <!-- ? WTF-->
+				<li>	
 					<a href="user.php">
 						<i class="fa fa-users" aria-hidden="true"></i>
 						<span>Manage Users</span>

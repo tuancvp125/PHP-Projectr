@@ -42,7 +42,13 @@ function update_user($conn, $data) {
 }
 
 function delete_user($conn, $data) {
+
+    $sql = "DELETE FROM tasks WHERE assigned_to = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$data[0]]);
+
     $sql = "DELETE FROM users WHERE id=? AND role=?";
     $stmt = $conn->prepare($sql);
     $stmt->execute($data);
 }
+
