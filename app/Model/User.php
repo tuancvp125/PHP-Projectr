@@ -62,3 +62,9 @@ function get_all_tasks_by_id($conn, $id){
 	}else $tasks = 0;
 	return $tasks;
 }
+
+function update_profile($conn, $data){
+	$sql = "UPDATE users SET full_name=?,  password=? WHERE id=? ";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute($data);
+}
