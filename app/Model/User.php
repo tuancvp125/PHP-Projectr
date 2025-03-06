@@ -39,9 +39,10 @@ function update_user($conn, $data) {
     $sql = "UPDATE users SET full_name=?, username=?, password=?, role=? WHERE id=? AND role=?";
     $stmt = $conn->prepare($sql);
     $stmt->execute($data);
-    if ($stmt->rowCount() > 0) {
-        $users = $stmt->fetchAll();
-    } else $users = 0;
+}
 
-    return 1;
+function delete_user($conn, $data) {
+    $sql = "DELETE FROM users WHERE id=? AND role=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($data);
 }
